@@ -1,0 +1,70 @@
+<div data-ng-controller="addclientinfocontroller">
+				<div class="login-top agileinfo">
+								<h2>Add New Record</h2>
+								<form name="myForm"action="#" method="post">
+								<div data-ng-if="savedrecord">
+									<span style="color: blue;">
+											<h5>Your data is saved. Go to listing page to see.</h5>
+									</span>
+									<br><br>
+									Name : <span>{{user.name}}</span><br>
+									Province : <span>{{user.province.description}}</span><br>
+									Telephone : <span>{{user.telephone}}</span><br>
+									Postal Code : <span>{{user.postalcode}}</span><br>
+									Salary : <span>{{user.salary}}</span><br>
+									
+									<div class="aitssubmitw3ls">
+											<input type="button" name="Back" value="Back to Add Record" data-ng-click="clearRecord(user);">
+									</div>
+								</div>
+								<div data-ng-if="!savedrecord">
+									<div class="w3_agileits_main_grid w3l_main_grid">
+										<div class="agileits_grid">
+											<h5>Name * </h5>
+											<div class="name">
+												<input type="text" name="Firstname" placeholder="Your Name" required="" data-ng-model="user.name" data-ng-minlength="2" title="2 characters minimum">
+												<span ng-show="myForm.Firstname.$error.minlength">Minimum 2 characters required</span>
+  											    <span ng-show="myForm.Firstname.$error.required && myForm.Firstname.$dirty" style="color: red;">This field is required!</span>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</div>
+									<div class="w3_agileits_main_grid w3l_main_grid">
+										<div class="agileits_grid">
+											<h5>Province</h5>
+											 <select id="province" name="country" data-ng-model="user.province" data-ng-options="item as item.description for item in countryselection" required>
+											 	<option value="">Please select an option</option>
+											 	</select>
+  											    <span ng-show="myForm.country.$error.required  && myForm.country.$dirty" style="color: red;">This field is required!</span>
+ 								</div>
+									</div>
+									<div class="w3_agileits_main_grid w3l_main_grid">
+										<div class="agileits_grid">
+											<h5>Telephone *</h5>
+												<input type="text" name="telephone" placeholder="Your Telephone" required="" data-ng-model="user.telephone" style="width: 225px;" ng-pattern="Telregex">
+												<span ng-show="!(myForm.telephone.$valid) && !(myForm.telephone.$error.required)">Not a valid number!</span>
+  											    <span ng-show="myForm.telephone.$error.required  && myForm.telephone.$dirty" style="color: red;">This field is required!</span>
+										</div>
+										<div class="agileits_grid">
+											<h5>Postal Code</h5>
+												<input type="text" name="postalcode" placeholder="Your Postal Code" required="" data-ng-model="user.postalcode" style="width: 225px;" ng-pattern="postalregex">
+												<span ng-show="!(myForm.postalcode.$valid) && !(myForm.postalcode.$error.required)">Not a postal code!</span>
+  											    <span ng-show="myForm.postalcode.$error.required  && myForm.postalcode.$dirty" style="color: red;">This field is required!</span>
+										</div>
+									</div>
+									<div class="agileinfo_main_grid1">
+										<div class="agileits_w3layouts_grid mim">
+											<h5>Salary*</h5>
+											<input type="text" name="salary" placeholder="Your Salary" required="" data-ng-model="user.salary" style="width: 225px;" ng-pattern="salaryregex(user.province)">
+											<span ng-show="!(myForm.salary.$valid) && !(myForm.salary.$error.required)">Not a salary!</span>
+  											    <span ng-show="myForm.salary.$error.required  && myForm.salary.$dirty" style="color: red;">This field is required!</span>
+										</div>
+									</div>
+									<div class="clear"></div>
+										<div class="aitssubmitw3ls">
+											<input type="button" name="Save" value="Save" data-ng-disabled="myForm.$invalid" data-ng-click="saverecord(user);">
+									</div>
+								</div>
+								</form>
+							</div>
+						</div>

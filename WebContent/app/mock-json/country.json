@@ -1,0 +1,54 @@
+[
+{
+"code":"ON",
+"description":"Ontario"
+},
+{
+"code":"QU",
+"description":"Québec"
+},
+{
+"code":"NS",
+"description":"Nova Scotia"
+},
+{
+"code":"NB",
+"description":"New Brunswick"
+},
+{
+"code":"MA",
+"description":"Manitoba"
+},
+{
+"code":"BC",
+"description":"British Columbia"
+},
+{
+"code":"PE",
+"description":"Prince Edward Island"
+},
+{
+"code":"SA",
+"description":"Saskatchewan"
+},
+{
+"code":"AL",
+"description":"Alberta"
+},
+{
+"code":"NL",
+"description":"Newfoundland and Labrador"
+},
+{
+"code":"NT",
+"description":"Northwest Territories"
+},
+{
+"code":"YU",
+"description":"Yukon"
+},
+{
+"code":"NU",
+"description":"Nunavut"
+}
+]

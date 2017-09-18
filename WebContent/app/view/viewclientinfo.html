@@ -1,0 +1,46 @@
+<div data-ng-controller="viewclientinfocontroller">
+		<div class="login-top agileits">
+			<h3>Records</h3>
+			<!-- <!-- Search Criteria  -->
+			<!-- Country Selection Directive - Can be used to view selective country records - This has been implemented.-->
+			<!--	<country-Select></country-Select>
+			-->
+			<!-- Data Table  -->
+				<div>
+				<br><br>
+					<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+						<thead>
+							<tr>
+								<th> Name</th>
+								<th> Province</th>
+								<th> Telephone</th>
+								<th> Postal Code</th>
+								<th> Salary</th>
+							</tr>
+						</thead>
+						<!-- <tfoot>
+				            <tr>
+				                <th> Name</th>
+								<th> Province</th>
+								<th> Telephone</th>
+								<th> Postal Code</th>
+								<th> Salary</th>
+				            </tr>
+				        </tfoot> -->
+						<tbody>
+						<tr data-ng-repeat="x in showClientDataList">
+								<td>{{x.name}}</td>
+								<td>{{x.province}}</td>
+								<td>{{x.telephone}}</td>
+								<td>{{x.postalcode}}</td>
+								<td>{{x.salary}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		
+		</div>
+			
+			
+		</div>
